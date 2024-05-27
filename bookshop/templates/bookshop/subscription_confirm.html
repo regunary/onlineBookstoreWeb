@@ -1,0 +1,39 @@
+{% extends 'bookshop/base.html' %}
+{% load static %}
+
+<title>{% block title %} BookShelf | Nhận thông báo{% endblock%}</title>
+
+{% block content %}
+
+<div class="ps-section pt-80 pb-30">
+    <div class="ps-container">
+        <div class="ps-subscribe">
+            <div class="row">
+                <div class="container">
+                    {% if email.subscribed %}
+                    <h4>Subscription confirmed!</h4>
+                    <br>
+                    <a href="{% url 'index' %}" target="_blank">Click here to come back to Home page</a>
+                    {% else %}
+                    <h5 class="border-bottom border-gray pb-3">
+                        Subscription confirmation link has expired or is invalid.<br>
+                        Please click on the button below to receive an e-mail with a new confirmation link.
+                    </h5>
+                    <form method="post" action="{% url 'homepage:subscribe' %}">
+                        <div class="input-group">
+                            {% csrf_token %}
+                            <div class="col-md-3 col-sm-6">
+                                <div class="input-group-append">
+                                    <button type="submit" class="button gradient-btn w-100" id="submit_btn">try again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

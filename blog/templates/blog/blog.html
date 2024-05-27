@@ -1,0 +1,37 @@
+{% extends 'bookshop/base.html' %}
+{% load static %}
+
+<title>{% block title %} BookShelf | Tin tức{% endblock%}</title>
+
+{% block content %}
+
+<!-- Thêm blog -->
+<div class="ps-section">
+    <div class="ps-container">
+        <div class="ps-section__header text-center">
+            <h2 class="ps-section__title">Tin tức</h2>
+            <p>Một số bài viết cảm nhận về sách từ khách hàng.</p>
+        </div>
+        <div class="ps-section__content">
+            <div class="row row-flex" style="display: flex; flex-wrap: wrap">
+                {% for blog in blogs %}
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <div class="ps-post ps-post--home">
+                        <div class="ps-post__thumbnail">
+                            <div class="ps-post__posted" ><span class="date">{{ blog.created_on.day }}</span><span class="month">{{ blog.created_on.month }}</span></div><a class="ps-post__overlay" href="{% url 'blog_detail' blog.slug %}" ></a>
+                            <img class="lazy" href="{% url 'blog_detail' blog.slug %}" src="{{ blog.image.url }}"alt="">
+                        </div>
+                        <div class="ps-post__content"><a class="ps-post__title" href="{% url 'blog_detail' blog.slug %}">{{ blog.title }}</a>
+                            <p class="ps-post__meta"><span>By:<a class="mr-5" href="{% url 'blog_detail' blog.slug %}" > {{ blog.author }}</a></span></p>
+                            <p>{{ blog.content|safe|truncatewords:10 }}</p><a class="ps-post__morelink" href="{% url 'blog_detail' blog.slug %}">Xem thêm<i class="ps-icon-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hủy thêm blog -->
+
+{% endblock %}

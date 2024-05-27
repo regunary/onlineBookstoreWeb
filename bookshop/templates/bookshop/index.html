@@ -1,0 +1,129 @@
+{% extends 'bookshop/base.html' %}
+{% load static %}
+
+<title>{% block title %} BookShelf | Trang chủ{% endblock%}</title>
+
+{% block content %} 
+    <!-- Thêm slider -->
+    <div class="ps-home-slider">
+        <div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="home-1" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+            <div id="rev_slider_2_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.6.3.1">
+                <ul>
+                    <!-- custom -->
+                    <li data-index="rs-6" data-transition="zoomout,slotzoom-vertical,curtain-2" data-slotamount="default,default,default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power0.easeInOut,default,default" data-easeout="default,default,default" data-masterspeed="default,default,default" data-rotate="0,0,0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <!-- hình chính -->
+                        <img src="{% static 'bookshop/images/slider/slider-1a.jpg' %}" alt="" title="slider-1" width="1920" height="750" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <!-- layer -->
+                        <!-- layer 1 -->
+                        <a href="{% url 'product_list' %}"><div class="tp-caption rev-btn " id="slide-6-layer-1" data-x="['left','left','left','left']" data-hoffset="['1','20','10','10']" data-y="['middle','top','top','middle']" data-voffset="['110','374','548','90']" data-fontweight="['600','600','400','500']" data-color="['rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)','rgb(0,0,0)']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"500","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(51,51,51);bc:rgb(0,0,0);"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[14,14,14,10]" data-paddingright="[45,45,45,30]" data-paddingbottom="[12,12,12,10]" data-paddingleft="[45,45,45,30]" style="z-index: 5; white-space: nowrap; font-size: 14px; line-height: 20px; font-weight: 600; color: #333333;font-family:Poppins;text-transform:uppercase;background-color:rgba(0,0,0,0);border-color:rgba(0,0,0,1);border-style:solid;border-width:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;" >Xem sản phẩm</div></a>
+                        <!-- layer 2 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-6-layer-2" data-x="['left','left','left','left']" data-hoffset="['0','20','10','11']" data-y="['middle','middle','middle','middle']" data-voffset="['0','1','-1','0']" data-fontsize="['60','40','35','25']" data-lineheight="['60','60','40','30']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 60px; line-height: 60px; font-weight: 400; color: #000000; letter-spacing: 0px;font-family:Times New Roman;text-transform:uppercase;">sách hay</div>
+                        <!-- layer 3 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-6-layer-3" data-x="['left','left','left','left']" data-hoffset="['0','20','10','10']" data-y="['middle','top','middle','middle']" data-voffset="['50','334','40','36']" data-fontsize="['20','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 20px; font-weight: 600; color: #9f9f9f; letter-spacing: 0px;font-family:Nunito Sans;">ĐỌC VÀ CẢM NHẬN</div>
+                        <!-- layer 4 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-6-layer-5" data-x="['left','left','left','left']" data-hoffset="['0','20','10','10']" data-y="['middle','middle','middle','middle']" data-voffset="['-60','-44','-44','-36']" data-fontsize="['20','18','18','18']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":320,"speed":1500,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; white-space: nowrap; font-size: 20px; line-height: 20px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Cambria;text-transform:uppercase;">[Chuyên mục]</div>
+                    </li>
+                    <!-- custom -->
+                    <li data-index="rs-10" data-transition="zoomout,slotzoom-vertical,curtain-2" data-slotamount="default,default,default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power0.easeInOut,default,default" data-easeout="default,default,default" data-masterspeed="default,default,default" data-rotate="0,0,0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <!-- hình chính -->
+                        <img src="{% static 'bookshop/images/slider/slider-3a.jpg' %}" alt="" title="slider-2" width="1920" height="750" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <!-- layer -->
+                        <!-- layer 5 -->
+                        <a href="{% url 'product_list' %}"><div class="tp-caption rev-btn " id="slide-10-layer-1" data-x="['right','right','right','right']" data-hoffset="['0','10','10','10']" data-y="['middle','top','top','middle']" data-voffset="['110','374','548','90']" data-fontweight="['600','600','500','500']" data-color="['rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)','rgb(0,0,0)']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"500","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(51,51,51);bc:rgb(0,0,0);"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[14,14,14,10]" data-paddingright="[45,45,45,30]" data-paddingbottom="[12,12,12,10]" data-paddingleft="[45,45,45,30]" style="z-index: 5; white-space: nowrap; font-size: 14px; line-height: 20px; font-weight: 600; color: #333333;font-family:Poppins;text-transform:uppercase;background-color:rgba(0,0,0,0);border-color:rgba(0,0,0,1);border-style:solid;border-width:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Xem sản phẩm</div></a>
+                        <!-- layer 6 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-10-layer-2" data-x="['right','right','right','right']" data-hoffset="['0','10','10','10']" data-y="['middle','middle','middle','middle']" data-voffset="['0','1','-1','0']" data-fontsize="['60','40','35','25']" data-lineheight="['60','60','40','30']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 60px; line-height: 60px; font-weight: 400; color: #000000; letter-spacing: 0px;font-family:Times New Roman;text-transform:uppercase;">sách mới</div>
+                        <!-- layer 7 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-10-layer-3" data-x="['right','right','right','right']" data-hoffset="['0','10','10','10']" data-y="['middle','top','middle','middle']" data-voffset="['50','335','40','36']" data-fontsize="['20','15','15','15']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; white-space: nowrap; font-size: 20px; line-height: 20px; font-weight: 600; color: #9f9f9f; letter-spacing: 0px;font-family:Poppins;">HỌC CÁI MỚI</div>
+                        <!-- layer 8 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-10-layer-5" data-x="['right','right','right','right']" data-hoffset="['0','10','10','10']" data-y="['middle','middle','middle','middle']" data-voffset="['-60','-45','-44','-36']" data-fontsize="['20','18','18','18']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":320,"speed":1500,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; white-space: nowrap; font-size: 20px; line-height: 20px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Cambria;text-transform:uppercase;">[Chuyên mục]</div>
+                    </li>
+                </ul>
+                <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Hủy thêm slider -->
+    <div class="ps-section pt-80 pb-30">
+        <div class="ps-container">
+            <!-- Thêm subscribe -->
+            <div class="ps-subscribe">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-md-push-6">
+                        <div class="ps-subscribe__content"><i class="ps-icon-notify"></i>
+                            <h3>Đăng ký nhận thông báo</h3>
+                            <p>Và nhận <strong>voucher giảm giá 100.000VNĐ</strong> khi mua lần đầu ...!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-md-pull-6">
+                        <form id="form" method="POST" action="subscribe/">
+                            {% csrf_token %}
+                            <div class="form-group" >
+                                <div class="form-group__icon"><i class="fa fa-envelope"></i></div>
+                                <input name="subscribe" class="form-control" id="subscribe_input" type="text" placeholder="Điền email tại đây" required id="email_address">
+                            </div>
+                            <div class="form-group-append">
+                                <button style="height:55px; width:70px; background-color:rgb(0,180,214);
+                                border:solid 1px white; color:white; border-radius:5px;" id="submit"><i class="fa fa-envelope"></i> </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Hủy thêm subscribe -->
+
+            <!-- Thêm sách mới -->
+            <div class="ps-section__header text-center">
+                <h2 class="ps-section__title">SÁCH MỚI NHẤT</h2>
+                <p>Những bộ sưu tập sách nổi bật vừa cập nhật.</p>
+            </div>
+            <div class="ps-section__content">
+                <div class="row">
+                    {% for product in top_five_products %}
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                            <div class="ps-product--fashion">
+                                <div class="ps-product__thumbnail" style="width:250px;height:350px" ><a class="ps-product__overlay" href="{% url 'product_detail' product.slug %}"></a><img class="lazy" style="width:250px;height:350px" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="">
+                                    <ul class="ps-product__actions"></ul>
+                                </div>
+                                <div class="ps-product__content" style="width:250px"><a class="ps-product__title" href="{% url 'product_detail' product.slug %}">{{ product.name }}</a>
+                                    <p class="ps-product__price">{{ product.price }} VNĐ</p><br>  
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+   
+   <!-- Thêm blog -->
+<div class="ps-section">
+    <div class="ps-container">
+        <div class="ps-section__header text-center">
+            <h2 class="ps-section__title">Tin tức</h2>
+            <p>Một số bài viết cảm nhận về sách từ khách hàng.</p>
+        </div>
+        <div class="ps-section__content">
+            <div class="row">
+                {% for blog in blogs %}
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <div class="ps-post ps-post--home">
+                        <div class="ps-post__thumbnail">
+                            <div class="ps-post__posted"><span class="date">{{ blog.created_on.day }}</span><span class="month">{{ blog.created_on.month }}</span></div><a class="ps-post__overlay" href="{% url 'blog_detail' blog.slug %}"></a>
+                            <img class="lazy" src="{{ blog.image.url }}" alt="" style="width: 500px; height: 300px;">
+                        </div>
+                        <div class="ps-post__content"><a class="ps-post__title" href="{% url 'blog_detail' blog.slug %}">{{ blog.title }}</a>
+                            <p class="ps-post__meta"><span>By:<a class="mr-5" href="{% url 'blog_detail' blog.slug %}"> {{ blog.author }}</a></span></p>
+                            <p>{{ blog.content|safe|truncatewords:10 }}</p><a class="ps-post__morelink" href="{% url 'blog_detail' blog.slug %}">Xem thêm<i class="ps-icon-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hủy thêm blog -->
+
+
+{% endblock %}

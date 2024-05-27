@@ -1,0 +1,29 @@
+{% extends 'bookshop/base.html' %}
+{% load static %}
+
+<title>{% block title %} BookShelf | Nhận thông báo{% endblock%}</title>
+
+{% block content %}
+
+<div class="ps-section pt-80 pb-30">
+    <div class="ps-container">
+        <div class="ps-subscribe">
+            <div class="row">
+                <div class="container">
+                    {% if flag == false %}
+                    <h4>{{ message|safe }}</h4>
+                    <br>
+                    <a href="{% url 'contact_us' %}" target="_blank">Click here to Contact us</a>
+                    {% else %}
+                    <h5 class="border-bottom border-gray pb-3">
+                        {{ message|safe }}
+                    </h5><br>
+                    <a href="{% url 'index' %}" target="_blank">Click here to come back to Home page</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

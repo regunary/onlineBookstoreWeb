@@ -1,0 +1,153 @@
+{% extends 'bookshop/base.html' %}
+{% load static %}
+
+<title>{% block title %} {% if category %} BookShelf | {{ category.name }}{% else %} BookShelf | Giới thiệu về chúng tôi {% endif %}  {% endblock%}</title>
+{% block content %}
+
+<section id="home"></section>
+<div id="h">
+    <div class="container">
+      <div class="row">
+        <h1>Our Book Is Here</h1>
+        <hr class="aligncenter">
+        {% comment %} <h3>Best Design & Code Review</h3> {% endcomment %}
+      </div>
+      <!--/row -->
+    </div>
+    <!-- /.container -->
+</div>
+<!--/ H -->
+
+<section id="about"></section>
+<div id="w">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 centered">
+          <h4>GIỚI THIỆU VỀ BOOKSHEFT</h4>
+        </div>
+      </div>
+      <!--/row -->
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 centered mt">
+          <p class="text">BOOKSHEFT là hệ thống nhà sách trực tuyến thân thuộc của nhiều gia đình Việt kể từ nhà sách đầu tiên ra đời năm 2020 đến nay. Đến với không gian mua sắm trực tuyến của BOOKSHEFT, khách hàng có thể dễ dàng tìm thấy những cuốn sách hay, đa thể loại của nhiều nhà xuất bản, công ty sách trong và ngoài nước. </p>
+        </div>
+      </div>
+      <!--/row -->
+
+      <div class="row centered mt">
+        <i class="ion-ios-bookmarks-outline"></i>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="introduction">L</p>
+          <p class="text">òng say mê của đội ngũ là viên đá đầu tiên. Trải qua mấy năm phát triển, BOOKSHEFT đã được xây dựng dần lên trong diện mạo một nhà sách vững chãi và chuyên nghiệp. Chúng tôi vẫn đang ngày càng nỗ lực hơn trong hoạt động kinh doanh, tiếp tục góp phần vào sự nghiệp phát triển “văn hóa đọc”, làm cho những giá trị vĩnh hằng của sách ngày càng thấm sâu vào đời sống văn hóa tinh thần của xã hội.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <p class="introduction">C</p>
+          <p class="text">ùng tiêu chí không ngừng hoàn thiện, nâng cao chất lượng sản phẩm, dịch vụ, BOOKSHEFT cam kết mang đến cho khách hàng trải nghiệm mua sắm trực tuyến an toàn, tiện lợi: cách đặt hàng đơn giản, phương thức thanh toán đa dạng, dịch vụ chăm sóc khách hàng tận tình, chu đáo. </p>
+        </div>
+      </div>
+      <!--/row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 centered mt">
+          <img class="img-responsive" src="{% static 'bookshop/images/intro/book.png' %}" alt="">
+        </div>
+      </div>
+      <!--/row -->
+    </div>
+    <!--/container -->
+  </div>
+  <!--/w -->
+
+  <div id="g">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 centered">
+          <h4>BẠN CÓ THỂ MUA NHỮNG LOẠI SÁCH GÌ Ở BOOKSHEFT?</h4>
+        </div>
+      </div>
+      <!--row -->
+
+      <div class="row mt centered">
+        <div class="col-md-4">
+          <i class="ion-beaker"></i>
+          <h5>SÁCH QUỐC VĂN</h5>
+          <p class="desc">Gồm danh mục sách đa dạng và phong phú của nhiều Nhà xuất bản, nhà cung cấp sách có uy tín như: NXB Trẻ, Giáo Dục, Kim Đồng, Văn hóa -Văn Nghệ, Tổng hợp TP.HCM, Chính Trị Quốc Gia; Công ty Đông A, Nhã Nam, Bách Việt, Alphabook,...</p>
+        </div>
+        <div class="col-md-4">
+          <i class="ion-bookmark"></i>
+          <h5>SÁCH NGOẠI VĂN</h5>
+          <p class="desc">BOOKSHEFT chủ động chọn lọc và phát hành tại Việt Nam danh mục sách tiếng Anh đa dạng của những nhà xuất bản lớn trên thế giới như Penguin Random House, Hachette Livre, HarperCollins, Macmillan Publishers, Simon, Schuster,…</p>
+        </div>
+        <div class="col-md-4">
+          <i class="ion-camera"></i>
+          <h5>SÁCH THAM KHẢO</h5>
+          <p class="desc">Sách giáo khoa – tham khảo, giáo trình, sách học ngữ, từ điển, sách tham khảo thuộc nhiều chuyên ngành phong phú: văn học, tâm lý – giáo dục, khoa học kỹ thuật, khoa học kinh tế - xã hội, khoa học thường thức,...</p>
+        </div>
+      </div>
+      <!--/row -->
+
+      <div class="row mt centered">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <i class="ion-clipboard"></i>
+          <h5>TRUYỆN TRANH</h5>
+          <p class="desc">BOOKSHEFT cung cấp cho bạn đọc những bộ truyện tranh được thực hiện bởi các họa sĩ Việt Nam như "Thần đồng Đất Việt", "Cô Tiên Xanh", "Trạng Quỳnh" cho đến những bộ truyện tranh nước ngoài như Doraemon, Conan,...</p>
+        </div>
+        <div class="col-md-4">
+          <i class="ion-document"></i>
+          <h5>VÀ CÒN NHIỀU HƠN NỮA</h5>
+          <p class="desc">Chúng tôi đã và đang phát hành thêm nhiều thể loại sách đáp ứng nhu cầu của bạn đọc. Tất cả vì một gia sản sách to lớn, có sức sống dài lâu, có ý nghĩa với nhiều thế hệ bạn đọc. <br> Bởi vì sách là thế giới. </p>
+        </div>
+      </div>
+      <!--/row -->
+
+    </div>
+    <!--/container -->
+  </div>
+  <!--/G -->
+
+  {% comment %} <div id="w">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 centered">
+          <h4>WANT AN HONEST TESTIMONIAL?</h4>
+        </div>
+      </div>
+      <!--/row -->
+
+      <div class="row mt">
+        <div class="col-md-2">
+          <p class="testimonial"><img src="{% static 'bookshop/images/intro/ui-02.jpg' %}" class="img-circle aligncenter" alt="" width="60"></p>
+          <h6 class="centered">Lisa Smith</h6>
+        </div>
+        <div class="col-md-4">
+          <p class="testimonial">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+        </div>
+
+        <div class="col-md-2">
+          <p class="testimonial"><img src="{% static 'bookshop/images/intro/ui-03.jpg' %}" class="img-circle aligncenter" alt="" width="60"></p>
+          <h6 class="centered">David Brown</h6>
+        </div>
+        <div class="col-md-4">
+          <p class="testimonial">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.</p>
+        </div>
+      </div>
+      <!--/row -->
+
+      
+    </div>
+    <!--/container -->
+  </div>
+  <!--/w --> {% endcomment %}
+</body>
+{% endblock %}
+
+
+
+
+
+

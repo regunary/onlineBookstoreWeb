@@ -1,2 +1,3 @@
-# onlineBookstoreWeb
-An online bookstore website for buying books
+# Online BookStore
+
+Web project 

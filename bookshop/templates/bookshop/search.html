@@ -1,0 +1,41 @@
+{% extends 'bookshop/base.html' %}
+{% load static %}
+<title>{% block title %} {% if category %} BookShelf | {{ category.name }}{% else %} BookShelf | Tất cả sản phẩm {% endif %}  {% endblock%}</title>
+{% block content %}
+    <div class="ps-section pt-80 pb-30">
+        <div class="ps-container">
+            <div class="ps-section__header text-center">
+                <h2 class="ps-section__title">Tìm kiếm kết quả cho {{searh_query}}</h2>
+                
+            </div>
+             <!-- products  -->
+            <div class="ps-section__content">
+                <div class="row row-flex" style="display: flex; flex-wrap: wrap">
+                    {% for query in query_result %}
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                            <div class="ps-product--fashion">
+                                    <div class="ps-product__thumbnail" style="width:250px;height:350px"><a class="ps-product__overlay" href="{% url 'product_detail' query.slug %}"></a>
+                                        <img class="lazy" style="width:250px;height:350px" src="{% if query.image %}{{ query.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="">
+                                        <ul class="ps-product__actions">
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="ps-product__content" style="width:250px" ><a class="ps-product__title" href="{% url 'product_detail' query.slug %}">{{ query.name }}</a>
+                                        <p class="ps-product__price">{{ query.price }}VNĐ</p>
+                                    </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+

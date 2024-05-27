@@ -1,0 +1,38 @@
+{% extends 'bookshop/base.html' %}
+{% load static %}
+
+<title>{% block title %} BookShelf | Tin tức chi tiết{% endblock%}</title>
+
+{% block content %}
+<div class="ps-hero">
+    <div class="container">
+        <h3>{{ blog.title }}</h3>
+        
+    </div>
+</div>
+<main class="ps-main">
+    <div class="ps-container">
+        <div class="ps-product--detail">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
+                    <div class="ps-product__thumbnail">
+                        <div class="ps-product__image">
+                            <div class="item"><img class="zoom" style="width:auto;max-height:350px;margin-left:auto;margin-right:auto;" src="{{ blog.image.url }}" alt="" data-zoom-image="images/shoe-detail/1.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+                    <div class="ps-product__info">
+                        <h2>{{ blog.author }}</h2>
+                        <p class="ps-product__category">{{ blog.created_on }}</p>
+                        <div class="ps-product__short-desc">
+                            <p><b>Nội dung:</b> <br>{{ blog.content|safe }}</p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

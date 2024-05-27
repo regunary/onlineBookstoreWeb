@@ -1,0 +1,78 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}
+  BookShelf | Đơn hàng {{ order.id }} {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+  <div class="breadcrumbs">
+    <a href="{% url "admin:index" %}">Trang chủ</a> &rsaquo;
+    <a href="{% url "admin:orders_order_changelist" %}">Đơn hàng</a>
+    &rsaquo;
+    <a href="{% url "admin:orders_order_change" order.id %}">Đơn số {{ order.id }}</a>
+    &rsaquo; Thông tin
+  </div>
+{% endblock %}
+
+{% block content %}
+<h1>Đơn số {{ order.id }}</h1>
+<ul class="object-tools">
+  <li>
+    <a href="#" onclick="window.print();">In đơn hàng</a>
+  </li>
+</ul>
+<table>
+  <tr>
+    <th>Tạo đơn</th>
+    <td>{{ order.created }}</td>
+  </tr>
+  <tr>
+    <th>Khách hàng</th>
+    <td>{{ order.first_name }} {{ order.last_name }}</td>
+  </tr>
+  <tr>
+    <th>E-mail</th>
+    <td><a href="mailto:{{ order.email }}">{{ order.email }}</a></td>
+  </tr>
+  <tr>
+    <th>Địa chỉ</th>
+    <td>{{ order.address }}, {{ order.postal_code }} {{ order.city }}</td>
+  </tr>
+  <tr>
+    <th>Tổng tiền</th>
+    <td>{{ order.get_total_cost }}VNĐ</td>
+  </tr>
+  <tr>
+    <th>Trạng thái</th>
+    <td>{% if order.paid %}Đã thanh toán{% else %}Chờ thanh toán{% endif %}</td>
+  </tr>
+</table>
+
+<div class="module">
+  <h2>Sản phẩm đã mua</h2>
+  <table style="width:100%">
+    <thead>
+      <tr>
+        <th>Sản phẩm</th>
+        <th>Giá tiền</th>
+        <th>Số lượng</th>
+        <th>Tổng tiền</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in order.items.all %}
+        <tr class="row{% cycle "1" "2" %}">
+          <td>{{ item.product.name }}</td>
+          <td class="num">${{ item.price }}</td>
+          <td class="num">{{ item.quantity }}</td>
+          <td class="num">${{ item.get_cost }}</td>
+        </tr>
+      {% endfor %}
+      <tr class="total">
+        <td colspan="3">Tổng tiền</td>
+        <td class="num">${{ order.get_total_cost }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}
